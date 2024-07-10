@@ -7,9 +7,9 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
-  background-image: url(../images/BackgroundV1S.png);
 }
 
 img {
@@ -90,6 +90,24 @@ img {
 .menu_btn {
   border: none;
   background: none;
+}
+
+.back_content {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: calc(100%);
+
+  top: 0;
+  z-index: -10;
+}
+
+.background {
+  object-fit: cover;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*----------Additional styles----------*/
