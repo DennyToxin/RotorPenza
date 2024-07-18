@@ -1,20 +1,51 @@
 
 /*----------Global text properties----------*/
 
-* {
+p, h1 {
   padding: 0;
+  margin: 0;
 }
 
 /*----------Main text styles----------*/
 
 .anchorLink {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 100%;
   padding: 7px 0;
   
   font-family: "Montserrat";
   color: var(--fontColor);
   text-decoration: none;
+}
+
+.titleText {
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: 500;
+
+  font-family: "Montserrat";
+  color: var(--fontColor);
+}
+
+.defaultText {
+  font-size: 20px;
+  line-height: 110%;
+
+  font-family: "Montserrat";
+  color: var(--fontColor);
+}
+
+.backgroundText {
+  position: absolute;
+  left: 0;
+  font-size: 240px;
+  line-height: 100%;
+
+  font-family: "Montserrat";
+  color: var(--tabColor);
+  user-select: none;
+  opacity: 0.12;
+  z-index: 0;
 }
 
 /*----------Additional text styles----------*/
