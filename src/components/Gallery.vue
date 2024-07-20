@@ -1,6 +1,20 @@
 <template>
   <div id="gallery" class="container gallery">
     <div class="tablet tabletFlex">
+      <GalleryPopup
+        v-if="isGalleryVisible"
+        @click.stop
+        @onCloseGallery="closePopupGallery"
+      ></GalleryPopup>
+      <Popup
+        v-if="isPopupVisible"
+        @click.stop
+        @onClose="closePopup"
+        :popupImage="popupImage"
+      ></Popup>
+      <div class="buttonWraper">
+        <button @click="showGallery" class="galleryButton">Все фото</button>
+      </div>
       <div class="galleryWraper">
         <swiper
           class="border"
@@ -19,34 +33,10 @@
           }"
         >
           <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
-          /></swiper-slide>
-          <swiper-slide
-            ><img class="swiperImage" src="../assets/images/about.jpg"
+            v-for="item in galleryImages"
+            :key="item.id"
+            @click="showPopup(item)"
+            ><img class="swiperImage" :src="item.url"
           /></swiper-slide>
         </swiper>
       </div>
@@ -55,6 +45,10 @@
 </template>
 
 <script>
+//Import Popup
+import Popup from "./Popup.vue";
+import GalleryPopup from "./GalleryPopup.vue";
+
 // import Swiper core and required modules
 import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules";
 
@@ -64,11 +58,12 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
 import "swiper/css";
 import "../assets/styles/navigation.css";
-//import "../assets/styles/pagination.css";
 
 // Import Swiper styles
 export default {
   components: {
+    GalleryPopup,
+    Popup,
     Swiper,
     SwiperSlide,
   },
@@ -84,6 +79,42 @@ export default {
       onSlideChange,
       modules: [Autoplay, Navigation, Pagination, A11y],
     };
+  },
+  data() {
+    return {
+      galleryImages: [
+        { id: 1, url: "src/assets/images/about.jpg" },
+        { id: 2, url: "src/assets/images/first.png" },
+        { id: 3, url: "src/assets/images/second.jpg" },
+        { id: 4, url: "src/assets/images/third.jpg" },
+        { id: 5, url: "src/assets/images/about.jpg" },
+        { id: 6, url: "src/assets/images/first.png" },
+        { id: 7, url: "src/assets/images/second.jpg" },
+        { id: 8, url: "src/assets/images/third.jpg" },
+      ],
+      popupImage: "",
+      isPopupVisible: false,
+      isGalleryVisible: false,
+    };
+  },
+  methods: {
+    showPopup(item) {
+      this.popupImage = item.url;
+      this.isPopupVisible = !this.isPopupVisible;
+      document.body.style.overflow = "hidden"
+    },
+    showGallery() {
+      this.isGalleryVisible = !this.isGalleryVisible;
+      document.body.style.overflow = "hidden"
+    },
+    closePopup() {
+      this.isPopupVisible = !this.isPopupVisible;
+      document.body.style.overflow = ""
+    },
+    closePopupGallery() {
+      this.isGalleryVisible = !this.isGalleryVisible;
+      document.body.style.overflow = ""
+    }
   },
 };
 </script>
