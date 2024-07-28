@@ -1,55 +1,59 @@
 
 /*----------Global text properties----------*/
 
-* {
-  margin: 0;
+p, h1 {
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  font-family: "Inter";
-  font-size: 20px;
-  font-weight: 550;
-  color: var(--font_color);
+  margin: 0;
 }
 
 /*----------Main text styles----------*/
 
-.link {
-  width: 100%;
-  padding: 12px;
-  cursor: pointer;
-  text-align: center;
+.anchorLink {
+  font-size: 16px;
+  line-height: 100%;
+  padding: 7px 0;
+  
+  font-family: "Montserrat";
+  color: var(--fontColor);
+  text-decoration: none;
+}
+
+.titleText {
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: 500;
 
   font-family: "Montserrat";
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--font_color);
-
-  transition: all ease-in-out 0.3s;
-  &:hover {
-    background-color: var(--focused);
-  }
+  color: var(--fontColor);
 }
 
-.title {
-  font-size: 28px;
-  font-weight: 600;
+.defaultText {
+  font-size: 20px;
+  line-height: 110%;
+
+  font-family: "Montserrat";
+  color: var(--fontColor);
 }
 
-.title_first::first-line {
-  font-size: 28px;
-  font-weight: 600;
+.backgroundText {
+  position: absolute;
+  left: 0;
+  font-size: 240px;
+  line-height: 100%;
+
+  font-family: "Montserrat";
+  color: var(--tabColor);
+  user-select: none;
+  opacity: 0.12;
+  z-index: 0;
 }
 
 /*----------Additional text styles----------*/
 
-.center {
-  text-align: center;
+.warn {
+  font-family: "Inter";
+  font-size: 32px;
+  font-weight: 600;
 }
 
 /*----------Responsable text styles----------*/

@@ -1,19 +1,10 @@
 <template>
-  <div class="content">
-    <div class="tab_horizontal transparent">
-      <div id="services">
-        <p class="title center">Наши услуги</p>
-        <p class="center">
-          Мы предлагаем для вас несколько видов услуг. Если вы не найдете нужной
-          услуги, мы всегда готовы обсудить, чем можем помочь вам.
-        </p>
-      </div>
-    </div>
-    <div class="tab_horizontal card transparent">
-      <img src="/src/assets/images/first.png" />
-      <div class="text_card">
-        <p class="title center">Производство формующих роторов</p>
-        <p>
+  <div id="services" class="container service">
+    <div class="tablet tabletFlex">
+      <div class="serviceCard">
+        <h1 class="backgroundText">01</h1>
+        <p class="titleText">Производство формующих роторов</p>
+        <p class="defaultText">
           Мы производим формующие роторы для таких формующих машин, как,
           ШР-1/3М, А2-ШБГ, Laser, Padivani. Формирующий вал (барабан),
           представляет собой ключевой компонент машины для формовки. Мы
@@ -24,31 +15,30 @@
           используются три типа материалов: капролон, бронза и чугун.
         </p>
       </div>
-    </div>
-    <div class="tab_horizontal card transparent">
-      <img src="/src/assets/images/second.jpg" />
-      <div class="text_card">
-        <p class="title center">Ремонт формующих роторов</p>
-        <p>
+      <div class="serviceCard">
+        <h1 class="backgroundText">02</h1>
+        <p class="titleText">Ремонт формующих роторов</p>
+        <p class="defaultText">
           Мы предлагаем услуги по замене рисунка при сохранении формы и размеров
           тестовой заготовки, изменение формы и размера, а также ремонт
           формующего ротора при сколе форм или других деформаций.
         </p>
       </div>
-    </div>
-    <div class="tab_horizontal card transparent">
-      <img src="/src/assets/images/third.jpg" />
-      <div class="text_card">
-        <p class="title center">Комплектующие для формующих роторов</p>
-        <p>
+      <div class="serviceCard">
+        <h1 class="backgroundText">03</h1>
+        <p class="titleText">Комплектующие для формующих роторов</p>
+        <p class="defaultText">
           Мы изготавливаем компоненты на формующие роторы. У нас вы найдете
           втулки из бронзы и полмерных материалов. Эти компоненты,
           функционирующие как подшипники скольжения, отличаются превосходной
           износостойкостью и надежностью в работе. Также предлагаем для вас
           зубчатые колеса, болты с таворницами, шайбы, шпонки и ножи для
-          отсечения теста. работы.
+          отсечения теста.
         </p>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+</style>

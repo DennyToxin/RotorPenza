@@ -1,19 +1,11 @@
 <template>
-  <div class="content navibar">
-    <div class="tab_horizontal bar responsable_false transparent">
-      <a class="link" href="#about">О нас</a>
-      <a class="link" href="#services">Услуги</a>
-      <a class="link" href="#gallery">Галерея</a>
-      <a class="link" href="#contacts">Контакты</a>
-    </div>
-    <div class="tab_horizontal transparent responsable_true">
-      <a class="link" href="#home">RotorPenza</a>
-      <button class="link menu_btn">Меню</button>
-      <div class="dropdawn_content transparent">
-        <a class="link" href="#about">О нас</a>
-        <a class="link" href="#services">Услуги</a>
-        <a class="link" href="#gallery">Галерея</a>
-        <a class="link" href="#contacts">Контакты</a>
+  <div class="barContainer">
+    <div class="tabletBar">
+      <a class="anchorLink" href="#panorama">RotorPenza</a>
+      <div class="subTabletBar">
+        <a class="anchorLink" href="#services">Услуги</a>
+        <a class="anchorLink" href="#gallery">Фото</a>
+        <a class="anchorLink" href="">Контакты</a>
       </div>
     </div>
   </div>

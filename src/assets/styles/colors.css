@@ -1,7 +1,8 @@
 
 :root {
-  --font_color: rgb(31, 36, 33);
-  --tab_color: rgb(220, 225, 222);
-  --transparent: rgb(220, 225, 222, 0.24);
-  --focused: rgba(220, 225, 222, 0.6);
+  --background: #edf2f4;
+  --tabColor: #8d99ae;
+  --fontColor: #2b2d42;
+  --special: #ef233c;
+  --focused: #d80032;
 }

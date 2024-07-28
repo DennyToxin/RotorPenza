@@ -1,7 +1,8 @@
 <template>
-  <div id="home" class="content panorama">
-    <div class="tab_horizontal">
-      <img class="panorama_img" src="../assets/images/panorama.png">
+  <div id="panorama" class="container panorama">
+    <div class="tablet tabletFlex">
+      <div class="textContainer"></div>
+      <div class="image"></div>
     </div>
   </div>
 </template>
