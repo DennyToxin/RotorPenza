@@ -1,10 +1,10 @@
 <template>
-  <div id="services" class="container service">
-    <div class="tablet tabletFlex">
-      <div class="serviceCard">
-        <h1 class="backgroundText">01</h1>
-        <p class="titleText">Производство формующих роторов</p>
-        <p class="defaultText">
+  <div id="Services" class="container">
+    <div class="services">
+      <div class="services__card">
+        <h5 class="services__card--number">01</h5>
+        <h6 class="services__card--title">Производство формующих роторов</h6>
+        <p class="services__card--text">
           Мы производим формующие роторы для таких формующих машин, как,
           ШР-1/3М, А2-ШБГ, Laser, Padivani. Формирующий вал (барабан),
           представляет собой ключевой компонент машины для формовки. Мы
@@ -15,30 +15,27 @@
           используются три типа материалов: капролон, бронза и чугун.
         </p>
       </div>
-      <div class="serviceCard">
-        <h1 class="backgroundText">02</h1>
-        <p class="titleText">Ремонт формующих роторов</p>
-        <p class="defaultText">
+      <div class="services__card">
+        <h5 class="services__card--number">02</h5>
+        <h6 class="services__card--title">Ремонт формующих роторов</h6>
+        <p class="services__card--text">
           Мы предлагаем услуги по замене рисунка при сохранении формы и размеров
           тестовой заготовки, изменение формы и размера, а также ремонт
           формующего ротора при сколе форм или других деформаций.
         </p>
       </div>
-      <div class="serviceCard">
-        <h1 class="backgroundText">03</h1>
-        <p class="titleText">Комплектующие для формующих роторов</p>
-        <p class="defaultText">
+      <div class="services__card">
+        <h5 class="services__card--number">03</h5>
+        <h6 class="services__card--title">Комплектующие для формующих роторов</h6>
+        <p class="services__card--text">
           Мы изготавливаем компоненты на формующие роторы. У нас вы найдете
           втулки из бронзы и полмерных материалов. Эти компоненты,
           функционирующие как подшипники скольжения, отличаются превосходной
           износостойкостью и надежностью в работе. Также предлагаем для вас
           зубчатые колеса, болты с таворницами, шайбы, шпонки и ножи для
-          отсечения теста.
+          отсечения теста. работы.
         </p>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped>
-</style>

@@ -1,0 +1,11 @@
+/* Import */
+
+@import 'reset.scss',
+  'global.scss',
+  'variables.scss',
+  'typography.scss';
+
+@import './blocks/navibar',
+  './blocks/services',
+  './blocks/gallery',
+  './blocks/popup';

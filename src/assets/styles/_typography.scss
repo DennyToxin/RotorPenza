@@ -1,0 +1,47 @@
+/* Import fonts */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url('../fonts/Inter-VariableFont.ttf');
+}
+
+/* Font styles */
+
+h5 {
+  font-family: "Montserrat";
+  font-size: 160px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #8d99ae30;
+  user-select: none;
+}
+
+h6 {
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 1.2;
+  user-select: none;
+}
+
+p {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 1.2;
+  user-select: none;
+}
+
+
+@media screen and (max-width: 680px) {
+  h6 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

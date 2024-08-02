@@ -1,0 +1,120 @@
+/* NavigationBar.vue */
+
+.navibar {
+  width: 100vw;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: solid 2px var(--font-color);
+
+  // brand
+  &__brand {
+    display: flex;
+    align-items: center;
+    margin-left: 4vw;
+    gap: 8px;
+
+    &--logo {
+      height: 32px;
+    }
+
+    &--name {
+      padding: 8px 0;
+      font-size: 20px;
+      font-family: "Montserrat";
+      color: var(--font-color);
+    }
+  }
+
+  // inner
+  &__inner {
+    display: flex;
+    gap: 3vw;
+    margin-right: 4vw;
+
+    &--item {
+      padding: 8px 0;
+      font-size: 20px;
+      font-family: "Montserrat";
+      color: var(--font-color);
+    }
+
+    &--item-hidden {
+      display: none;
+    }
+
+    &--button {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: none;
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 500px) {
+  .navibar
+  {
+    // inner
+    &__inner {
+      position: fixed;
+      flex-direction: column;
+      margin: 0;
+      gap: 8px;
+      top: 0;
+      right: -100%;
+      width: 80vw;
+      height: 100dvh;
+      z-index: 10;
+      background-color: var(--tablet-color);
+      transition: all ease-in-out .5s;
+
+      &--item {
+        padding-left: 16px;
+        font-size: 28px;
+      }
+
+      &--item-hidden {
+        display: inline-block;
+      }
+
+      &--button {
+        width: fit-content;
+        display: inline-block;
+        padding-left: 8px;
+      }
+    }
+
+    // overlay
+    &__overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+    }
+
+    &__button {
+      display: inline-block;
+      margin-right: 4vw;
+    }
+  }
+}
+
+/* Mobile menu activate */
+
+#navibar__collapse:checked ~ .navibar__inner {
+  right: 0;
+}
+
+#navibar__collapse:checked ~ .navibar__overlay {
+  display: flex;
+}
