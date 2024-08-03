@@ -1,7 +1,7 @@
 .services
 {
   width: 88vw;
-  height: calc(100dvh - 82px);
+  height: calc(100vh - 82px);
   margin: 0 6vw;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
     border-bottom: solid 2px var(--font-color);
 
     &:nth-child(1) {
-      margin-top: 4dvh;
+      margin-top: 4vh;
     }
   }
 

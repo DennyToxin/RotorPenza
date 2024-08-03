@@ -1,14 +1,14 @@
 .home-page
 {
   width: 88vw;
-  height: calc(100dvh - 82px);
+  height: calc(100vh - 82px);
   margin: 0 6vw;
   display: flex;
   flex-direction: column;
 
   &__text {
     width: 100%;
-    margin: 4dvh 0;
+    margin: 4vh 0;
     font-family: "Inter";
     line-height: 1.2;
     font-size: clamp(16px, 1vw, 22px);

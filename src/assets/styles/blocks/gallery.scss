@@ -1,7 +1,7 @@
 .gallery
 {
   width: 88vw;
-  height: calc(100dvh - 82px);
+  height: calc(100vh - 82px);
   margin: 0 6vw;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
   }
 
   &__image {
-    height: 60dvh;
+    height: 60vh;
     width: 100%;
     object-fit: cover;
     cursor: pointer;
