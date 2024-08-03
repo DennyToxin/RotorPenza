@@ -1,18 +1,10 @@
-/* Global */
-
-body
-{
+body {
   background-color: var(--background-color);
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-.container
-{
+.container {
   width: 100vw;
   height: 100dvh;
-
-  border-bottom: solid 1px black;
+  padding-top: 41px;
+  border-bottom: solid 2px var(--font-color);
 }

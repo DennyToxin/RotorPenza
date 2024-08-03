@@ -1,13 +1,13 @@
 <script setup>
 import NavigationBar from "./components/NavigationBar.vue";
-import Panorama from "./components/Panorama.vue";
+import Home from "./components/Home.vue";
 import Services from "./components/Services.vue";
 import Gallery from "./components/Gallery.vue";
 </script>
 
 <template>
   <NavigationBar></NavigationBar>
-  <Panorama></Panorama>
+  <Home></Home>
   <Services></Services>
   <Gallery></Gallery>
 </template>

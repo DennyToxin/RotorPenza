@@ -1,0 +1,48 @@
+.gallery
+{
+  width: 88vw;
+  height: calc(100dvh - 82px);
+  margin: 0 6vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+
+  &__inner {
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 2px var(--font-color);
+    border-bottom: solid 2px var(--font-color);
+  }
+
+  &__image {
+    height: 60dvh;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__button {
+    width:fit-content ;
+    padding: 8px;
+    border-radius: 16px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      box-shadow: 5px 5px 5px var(--shadow-color),
+      -3px -3px 5px white;
+    }
+
+    &:active {
+      transition: all ease-in-out 0s;
+      box-shadow: 5px 5px 2px var(--shadow-color),
+      -3px -3px 2px white;
+    }
+  }
+}
