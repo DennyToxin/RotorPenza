@@ -1,0 +1,6 @@
+/* Import */
+
+@import "reset.scss", "variables.scss", "typography.scss", "global.scss";
+
+@import "./blocks/navibar", "./blocks/services", "./blocks/gallery",
+  "./blocks/modal", "./blocks/home.scss";

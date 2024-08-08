@@ -1,0 +1,108 @@
+.navibar {
+  width: 88vw;
+  margin: 0 6vw;
+  padding: 6px 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: fixed;
+  background-color: var(--background-color);
+  border-bottom: solid 2px var(--font-color);
+
+  &__brand {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__logo {
+    width: 20px;
+    margin-left: 12px;
+  }
+
+  &__company-name {
+    display: block;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    color: var(--font-color);
+    transition: all ease-in-out 0.3s;
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 3px 3px 5px var(--shadow-color), -2px -2px 5px white;
+      }
+
+      &:active {
+        transition: all linear 0s;
+        box-shadow: 1px 1px 4px var(--shadow-color), -1px -1px 4px white;
+      }
+    }
+  }
+
+  &__drop-button {
+    display: none;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 16px;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+
+  &__link {
+    display: block;
+    font-family: "Montserrat";
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 16px;
+    color: var(--font-color);
+    transition: all ease-in-out 0.3s;
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 3px 3px 5px var(--shadow-color), -2px -2px 5px white;
+      }
+
+      &:active {
+        transition: all linear 0s;
+        box-shadow: 1px 1px 4px var(--shadow-color), -1px -1px 4px white;
+      }
+    }
+  }
+}
+
+//Collaps
+@media screen and (max-width: 540px) {
+  .navibar {
+    &__list {
+      display: none;
+    }
+
+    &__list--active {
+      width: 100%;
+      padding: 16px;
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 42px;
+      background-color: var(--background-color);
+    }
+
+    &__drop-button {
+      display: block;
+    }
+  }
+}
