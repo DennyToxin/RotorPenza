@@ -9,36 +9,27 @@
     </button>
     <div class="modal-gallery__wrapper">
       <div class="modal-gallery__inner">
-        <!-- <img
-          v-for="item in galleryImages"
-          :key="item.id"
-          class="modal-gallery__image"
-          :src="item.url"
-        /> -->
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
-        <div class="modal-gallery__image"></div>
+        <div
+          class="modal-gallery__image-placer"
+          v-for="image in imageList"
+          :key="image.id"
+        >
+          <img class="modal-gallery__image" :src="image.url" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { imageLinks } from "@/variables";
+
 export default {
+  data() {
+    return {
+      imageList: imageLinks,
+    };
+  },
   props: {
     galleryImages: String,
   },

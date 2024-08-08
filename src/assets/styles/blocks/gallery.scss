@@ -20,7 +20,7 @@
   &__image {
     height: 60vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     cursor: pointer;
   }
 
@@ -32,17 +32,20 @@
     font-size: 16px;
     font-weight: 550;
     cursor: pointer;
+    color: var(--font-color);
     transition: all ease-in-out .3s;
 
-    &:hover {
-      box-shadow: 5px 5px 5px var(--shadow-color),
-      -3px -3px 5px white;
-    }
-
-    &:active {
-      transition: all ease-in-out 0s;
-      box-shadow: 5px 5px 2px var(--shadow-color),
-      -3px -3px 2px white;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 5px 5px 5px var(--shadow-color),
+        -3px -3px 5px white;
+      }
+  
+      &:active {
+        transition: all ease-in-out 0s;
+        box-shadow: 5px 5px 2px var(--shadow-color),
+        -3px -3px 2px white;
+      }
     }
   }
 }

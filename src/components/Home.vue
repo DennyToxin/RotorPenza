@@ -7,7 +7,7 @@
         сахарного печенья и заливки мармелада. Создание струнных резок и фильер
         для пряничного производства.
       </p>
-      <div class="home-page__image"></div>
+      <img class="home-page__image" src="../assets/images/photo1.png">
     </div>
   </div>
 </template>

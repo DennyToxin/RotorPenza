@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import { imageLinks } from "@/variables";
+
 // Import modals
 import ModalGallery from "./ModalGallery.vue";
 import ModalPhoto from "./ModalPhoto.vue";
@@ -79,23 +81,7 @@ export default {
   },
   data() {
     return {
-      galleryImages: [
-        { id: 1, url: "src/assets/images/about.jpg" },
-        { id: 2, url: "src/assets/images/first.png" },
-        { id: 3, url: "src/assets/images/second.jpg" },
-        { id: 4, url: "src/assets/images/third.jpg" },
-        { id: 5, url: "src/assets/images/about.jpg" },
-        { id: 6, url: "src/assets/images/first.png" },
-        { id: 7, url: "src/assets/images/second.jpg" },
-        { id: 8, url: "src/assets/images/third.jpg" },
-        { id: 9, url: "src/assets/images/about.jpg" },
-        { id: 10, url: "src/assets/images/first.png" },
-        { id: 11, url: "src/assets/images/second.jpg" },
-        { id: 12, url: "src/assets/images/third.jpg" },
-        { id: 13, url: "src/assets/images/first.png" },
-        { id: 14, url: "src/assets/images/second.jpg" },
-        { id: 15, url: "src/assets/images/third.jpg" },
-      ],
+      galleryImages: imageLinks,
       isPopupVisible: false,
       isGalleryVisible: false,
     };
