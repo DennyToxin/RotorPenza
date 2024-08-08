@@ -12,4 +12,10 @@ import Gallery from "./components/Gallery.vue";
   <Gallery></Gallery>
 </template>
 
-<script></script>
+<script>
+export default {
+  mounted() {
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+  },
+};
+</script>
