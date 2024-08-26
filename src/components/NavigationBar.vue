@@ -1,20 +1,56 @@
 <template>
-  <div class="content navibar">
-    <div class="tab_horizontal bar responsable_false transparent">
-      <a class="link" href="#about">О нас</a>
-      <a class="link" href="#services">Услуги</a>
-      <a class="link" href="#gallery">Галерея</a>
-      <a class="link" href="#contacts">Контакты</a>
+  <nav class="navibar">
+    <div class="navibar__brand">
+      <img class="navibar__logo" src="../assets/icons/logo.svg" />
+      <a @click="closeMenu" class="navibar__company-name" href="#"
+        >RotorPenza</a
+      >
     </div>
-    <div class="tab_horizontal transparent responsable_true">
-      <a class="link" href="#home">RotorPenza</a>
-      <button class="link menu_btn">Меню</button>
-      <div class="dropdawn_content transparent">
-        <a class="link" href="#about">О нас</a>
-        <a class="link" href="#services">Услуги</a>
-        <a class="link" href="#gallery">Галерея</a>
-        <a class="link" href="#contacts">Контакты</a>
-      </div>
+    <button @click="changeMenuVisibility()" class="navibar__drop-button">
+      Меню
+    </button>
+    <div id="collapse" class="navibar__list">
+      <a @click="closeMenu" class="navibar__link" href="#services">Услуги</a>
+      <a @click="closeMenu" class="navibar__link" href="#gallery">Галлерея</a>
+      <a @click="closeMenu" class="navibar__link" href="#">Контакты</a>
     </div>
-  </div>
+  </nav>
 </template>
+
+<script>
+import { mobileBreakpoint } from '@/variables';
+
+export default {
+  data() {
+    return {
+      isMenuVisible: false,
+    };
+  },
+  methods: {
+    changeMenuVisibility() {
+      const element = document.getElementById("collapse");
+      if (this.isMenuVisible) {
+        element.classList.replace("navibar__list--active", "navibar__list");
+        this.isMenuVisible = false;
+      } else {
+        element.classList.replace("navibar__list", "navibar__list--active");
+        this.isMenuVisible = true;
+      }
+    },
+    closeMenu() {
+      const element = document.getElementById("collapse");
+      element.classList.replace("navibar__list--active", "navibar__list");
+      this.isMenuVisible = false;
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", () => {
+      const element = document.getElementById("collapse");
+      if (window.innerWidth > mobileBreakpoint) {
+        element.classList.replace("navibar__list--active", "navibar__list");
+        this.isMenuVisible = false;
+      }
+    });
+  },
+};
+</script>
